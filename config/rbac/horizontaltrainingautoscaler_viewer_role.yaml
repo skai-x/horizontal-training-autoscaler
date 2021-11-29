@@ -1,0 +1,20 @@
+# permissions for end users to view horizontaltrainingautoscalers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: horizontaltrainingautoscaler-viewer-role
+rules:
+- apiGroups:
+  - skai-x.io.skai-x.io
+  resources:
+  - horizontaltrainingautoscalers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - skai-x.io.skai-x.io
+  resources:
+  - horizontaltrainingautoscalers/status
+  verbs:
+  - get

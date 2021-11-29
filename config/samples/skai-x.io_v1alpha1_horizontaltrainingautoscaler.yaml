@@ -1,0 +1,7 @@
+apiVersion: skai-x.io.skai-x.io/v1alpha1
+kind: HorizontalTrainingAutoscaler
+metadata:
+  name: horizontaltrainingautoscaler-sample
+spec:
+  # Add fields here
+  foo: bar

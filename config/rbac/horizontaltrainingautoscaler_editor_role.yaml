@@ -1,0 +1,24 @@
+# permissions for end users to edit horizontaltrainingautoscalers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: horizontaltrainingautoscaler-editor-role
+rules:
+- apiGroups:
+  - skai-x.io.skai-x.io
+  resources:
+  - horizontaltrainingautoscalers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - skai-x.io.skai-x.io
+  resources:
+  - horizontaltrainingautoscalers/status
+  verbs:
+  - get
